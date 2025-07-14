@@ -1,3 +1,12 @@
 This repository contains all matlab scripts and raw data files required to reproduce the data shown in figure 4 of 
 the mansucript entitled "3D-MINFLUX nanoscopy reveals distinct allosteric mechanisms for activation and modulation of PIEZO1 by Yoda1"
 by Verkest et al.
+
+Step 1 -  download all files into a folder on your comuter and add the path to this folder and subfolders to Matlab
+
+Step 2 -  open the file 'PIEZO1_ALFA_TrimerInPlaneProjection2Deposit.m' in Matlab and run it. This will create the probablity density plots shown in the left paned of Fig. 4D.
+
+Step 3 -  open the file 'PIEZO1_ALFA_yoda_analysis_1.m' - choose the data set you want to analysis (see instruction in script) and run the scipt. 
+          This will analyse the mean interblade distance of the selected data set and show the data as a scatter plot. In addition the script will plot 
+          the distribution of the interblade angles, an overlay of the mean localisations of all detected PIEZO1 trimers and three histograms showing the localisation precision of the traces of the detected trimers
+
