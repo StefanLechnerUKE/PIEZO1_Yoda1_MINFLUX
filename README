@@ -1,12 +1,27 @@
-This repository contains all matlab scripts and raw data files required to reproduce the data shown in figure 4 of 
-the mansucript entitled "3D-MINFLUX nanoscopy reveals distinct allosteric mechanisms for activation and modulation of PIEZO1 by Yoda1"
-by Verkest et al.
+PIEZO1 MINFLUX analysis
+Matlab scripts and MINFLUX raw datasets for "3D-MINFLUX nanoscopy reveals distinct allosteric mechanisms for activation and modulation of PIEZO1 by Yoda1" by Clement Verkest, Lucas Roettger, Nadja Zeitzschel & Stefan Lechner
+Contact: s.lechner@uke.de / c.verkest@uke.de
+This set of Matlab scripts are used to analyse and visualize PIEZO1 DNA-PAINT/MINFLUX published in Verkest et al., 2025 (https://doi.org/10.1101/2025.07.10.664100). The scripts and data are provided for academic and visualization purposes only. Commercial usage of the provided Minflux data (reproduction outside of the publication, etc. ) is forbidden. Please contact the authors for further inquiries.
 
-Step 1 -  download all files into a folder on your comuter and add the path to this folder and subfolders to Matlab
+System requirements
+The scripts were generated and tested with Matlab R2023b and R2024a and require additional Matlab toolboxes such as the Signal_Processing_Toolbox and Image_Processing_Toolbox.
 
-Step 2 -  open the file 'PIEZO1_ALFA_TrimerInPlaneProjection2Deposit.m' in Matlab and run it. This will create the probablity density plots shown in the left paned of Fig. 4D.
+Installation guide
+For instructions how to install Matlab on your system please refer to the Mathworks website. To install/run the code deposited here, download all folder and subfolders and add them to your Matlab path. Then open the files 'PIEZO1_ALFA_yoda_analysis_1.m' and 'PIEZO1_ALFA_TrimerInPlaneProjection2Deposit.m'
 
-Step 3 -  open the file 'PIEZO1_ALFA_yoda_analysis_1.m' - choose the data set you want to analysis (see instruction in script) and run the scipt. 
-          This will analyse the mean interblade distance of the selected data set and show the data as a scatter plot. In addition the script will plot 
-          the distribution of the interblade angles, an overlay of the mean localisations of all detected PIEZO1 trimers and three histograms showing the localisation precision of the traces of the detected trimers
+Demo
+There is no specifc demo. All data analysed and shown in the paper are included in this repository and can be used for demonstration purposes
+
+Instructions for use
+1.)	To analyse and reproduce the left panels in Figure 4D–F, simply run the script 'PIEZO1_ALFA_TrimerInPlaneProjection2Deposit.m' in Matlab. This will create the same probability density plot as shown in the paper
+
+2.)	To analyse the interblade distances shown in the right panel of Figure 4D–F, 
+•	Open the script 'PIEZO1_ALFA_yoda_analysis_1.m'
+•	Set the variable ‘DataSource’ (code line 41) to a value between 0 and 8 to select the dataset you want to analyse.
+•	Run the script
+
+This will create a figure containing (i) a scatter plot of the interblade values, (ii) a histrogram showing the disributions of interblade angles, (iii) an overlay of the mean coordinates of all triple-labelled PIEZO1 trimered detected in the chosen experimental condition and (iv) three histograms showing the MINFLUX localisation precision of the detected fluorophores.
+Note, ii–iv are not show in the paper and the disrtibution of the individual data points in the scatter plot (i) will appear different from those in the figures in the paper, which were generated in GraphPad Prism, which uses a different algorithm than Matlab to minimize horizontal overlap of datapoints in scatter plots. 
+The mean interblade values can be found in the Matlab workspace (usually on the right hand side of the window) in a structure file named “result” in column 4 of the filed named “InterBlades”.
+
 
